@@ -1,0 +1,211 @@
+html {
+  background: #005d6f;
+  background-image: url("images/hrishikesh-pathak-313240-unsplash.jpg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 14px;
+  line-height: 1.4;
+  max-width: 100%;
+}
+/* #my-space{
+  animation: animate 0.6s ease-in-out infinite;
+}
+@keyframes animate {
+  0%{ 
+    cursor: url("images/cursor-1.png"), auto;
+  }
+  25%{ 
+    cursor: url("images/cursor-2.png"), auto;
+  }
+  50%{ 
+    cursor: url("images/cursor-3.png"), auto;
+  }
+  75%{ 
+    cursor: url("images/cursor-2.png"), auto;
+  }
+  100%{ 
+    cursor: url("images/cursor-1.png"), auto;
+  }
+} */
+body {
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  font-family: 'Open Sans', sans-serif;
+  margin: 0 auto;
+  overflow: auto;
+  max-width: 1000px;
+}
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 .4em 0;
+}
+h1:last-child, 
+h2:last-child, 
+h3:last-child, 
+h4:last-child, 
+h5:last-child, 
+h6:last-child {
+  margin-bottom: 0;
+}
+p {
+  margin: 0;
+}
+p+p {
+  margin-top: 1em;
+}
+a {
+  color: white;
+}
+a:hover {
+  text-decoration: none;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ul li {
+  line-height: 1.8;
+}
+aside {
+  flex: 1 1 40%;
+  min-width: 318px;
+  max-width: 100%;
+}
+section {
+  flex: 1 1 60%;
+  max-width: 100% !important;
+}
+div {
+  background: #005d6f;
+  border: 1px solid white;
+  margin: 16px;
+  padding: 8px;
+}
+.Basic-Info {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.Basic-Info>* {
+  flex: 1 1 100%;
+}
+.Me {
+  flex: 0 0 50%;
+  max-height: 200px;
+  margin-right: 16px;
+  margin-bottom: 8px;
+  width: 50%;
+  max-width: 150px;
+}
+.Basic-Info ul {
+    flex: 0 0 calc(50% - 16px);
+}
+.Social-Nav ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+.Social-Nav li {
+  flex: 0 0 50%;
+}
+.Social-Nav .Social-Item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1em;
+  text-decoration: none;
+}
+.Social-Nav .Social-Item:hover {
+  text-decoration: underline;
+}
+.Social-Nav .Social-Item:before {
+  background: url("images/icons/github1.svg");
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;
+  content: "";
+  display: inline-block;
+  height: 1.8em;
+  margin-right: 2rem;
+  width: 1.8em;
+}
+.Social-Nav .Social-Item.LinkedIn:before {
+  background: url("images/icons/linkedin2.svg");
+}
+.Social-Nav .Social-Item.Resume:before {
+  background: url("images/icons/download3.svg");
+}
+.Interests > span, 
+.General-Info > span {
+  display: flex;
+}
+.Interests > span+span, 
+.General-Info > span+span {
+  margin-top: 8px;
+}
+.Interests > span h4, 
+.General-Info > span h4 {
+  flex: 1 1 35%;
+}
+.Interests > span ul, 
+.Interests > span span, 
+.General-Info > span ul,
+.General-Info > span span {
+  flex: 1 1 65%;
+}
+.Interests > span ul li,
+.General-Info > span ul li {
+  display: inline-block;
+}
+.Interests > span ul li:not(:last-of-type):after {
+  content: ", "
+}
+.General-Info ul li+li {
+  margin-top: 1em;
+}
+.Projects ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.Projects li {
+  margin: 4px;
+  width: calc(100% / 3 - 8px)
+}
+.Projects img {
+  max-width: 100%;
+}
+#music {
+  background: #005d6f;
+  border: 1px solid white;
+  color: white;
+  margin: 8px;
+  padding: 8px;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+}
+#music:after {
+  content: "||";
+}
+#music.Paused:after {
+  content: ">";
+}
+#music:hover span:after {
+  background: #005d6f;
+  border: 1px solid white;
+  color: white;
+  content: "Click me to stop this song :(";
+  display: block;
+  max-height: calc(100% - 16px);
+  margin: 8px;
+  padding: 4px;
+  position: absolute;
+  bottom: -5px;
+  left: calc(-100% + 9px);
+  transform: translateX(-100%);
+  width: 180px;
+}
+#music.Paused:hover span:after {
+  content: "Click me to play a random song!";
+}
